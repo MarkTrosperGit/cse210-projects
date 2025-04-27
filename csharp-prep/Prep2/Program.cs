@@ -4,36 +4,36 @@ class Program
 {
     static void Main(string[] args)
     {
+        string letter;
+        string pass;
         Console.Write("What was your grade? ");
         string string_grade = Console.ReadLine();
         int grade = int.Parse(string_grade);
         if (grade >= 90)
         {
-            Console.WriteLine("You got an A.");
+            letter = "an A";
+            pass = "did";
         }
         else if (grade >= 80)
         {
-            Console.WriteLine("You got an B.");
+            letter = "a B";
+            pass = "did";
         }
         else if (grade >= 70)
         {
-            Console.WriteLine("You got an C.");
+            letter = "a C";
+            pass = "did";
         }
         else if (grade >= 60)
         {
-            Console.WriteLine("You got an D.");
+            letter = "a D";
+            pass = "did not";
         }
         else
         {
-            Console.WriteLine("You got an F.");
+            letter = "an f";
+            pass = "did not";
         }
-        if (grade >= 70)
-        {
-            Console.WriteLine("That's a passing grade.");
-        }
-        else if (grade < 70)
-        {
-            Console.WriteLine("That is not a passing grade.");
-        }
+        Console.WriteLine($"That's {letter}. Well, you {pass} pass.");
     }
 }
