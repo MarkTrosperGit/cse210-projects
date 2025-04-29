@@ -1,0 +1,11 @@
+Linked lists
+arrays
+lists
+sets - no duplicates
+
+Why - to loop, iterate
+
+Classes 
+	nouns - Marker
+Methods
+	verbs - Write Name
