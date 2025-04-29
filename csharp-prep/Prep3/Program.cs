@@ -4,10 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        int MagicNumber = 7;
+        Random randomGenerator = new Random();
+        int MagicNumber = randomGenerator.Next(1,11);
         int Guess = 0;
         string GuessString;
-        while(Guess != 7)
+        while(Guess != MagicNumber)
         {
             Console.Write("What is the magic number? ");
             GuessString = Console.ReadLine();
