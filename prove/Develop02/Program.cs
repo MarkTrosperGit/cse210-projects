@@ -76,8 +76,8 @@ class Program
 
                     using (StreamWriter outputFile = new StreamWriter(filewritename))
                     {
-                        // You can add text to the file with the WriteLine method
-                        outputFile.WriteLine(todaysJournal.GetEntries());
+                    // You can add text to the file with the WriteLine method
+                    outputFile.WriteLine(todaysJournal.GetEntries());
                     }
                     break;
                 case 5:
