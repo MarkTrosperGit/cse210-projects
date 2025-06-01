@@ -10,7 +10,7 @@ class Program
         while (run)
         {
             Console.Clear();
-            scripture1.displayScripture();
+            scripture1.DisplayScripture();
             Console.WriteLine();
             Console.WriteLine("Press enter if you would like to hide words. Otherwise, type quit: ");
             entry = Console.ReadLine();
@@ -20,7 +20,7 @@ class Program
             }
             else
             {
-                run = scripture1.hideWords();
+                run = scripture1.HideWords();
             }
         }
     }

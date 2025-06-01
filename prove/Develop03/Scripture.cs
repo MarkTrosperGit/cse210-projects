@@ -6,20 +6,20 @@ public class Scripture
 {
     private Reference _reference;
     private List<Word> _words;
-    public void displayScripture()
+    public void DisplayScripture()
     {
-        _reference.displayReference();
+        _reference.DisplayReference();
         foreach (Word word in _words)
         {
             Console.Write($"{word.GetWord()} ");
         }
     }
-    public bool hideWords()
+    public bool HideWords()
     {
         int hiddenCount = 0;
         foreach (Word word in _words)
         {
-            if (word.getHidden() == true)
+            if (word.GetHidden() == true)
             {
                 hiddenCount++;
                 if (hiddenCount == 55)
@@ -33,10 +33,10 @@ public class Scripture
         for (int i = 2; i > 0;)
         {
             int randomInt = rand.Next(wordCount);
-            if (_words[randomInt].getHidden() == true) ;
+            if (_words[randomInt].GetHidden() == true) ;
             else
             {
-                _words[randomInt].setHidden();
+                _words[randomInt].SetHidden();
                 i--;
             }
         }

@@ -7,7 +7,7 @@ public class Reference
     private int _chapter;
     private int _startVerse;
     private int? _endVerse;  //Add to cm file
-    public void displayReference()
+    public void DisplayReference()
     {
         if (!_endVerse.HasValue) //Add to cm file
         {

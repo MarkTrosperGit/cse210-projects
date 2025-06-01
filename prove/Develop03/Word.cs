@@ -15,15 +15,15 @@ public class Word
             return _text;
         }
     }
-    public bool getHidden()
+    public bool GetHidden()
     {
         return _isHidden;
     }
-    public void setHidden()
+    public void SetHidden()
     {
         _isHidden = true;
     }
-    public void resetHidden()
+    public void ResetHidden()
     {
         _isHidden = false;
     }
