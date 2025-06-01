@@ -23,5 +23,6 @@ class Program
                 run = scripture1.HideWords();
             }
         }
+        Console.WriteLine("Goodbye!");
     }
-}
+} 
