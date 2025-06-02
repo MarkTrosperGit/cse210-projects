@@ -1,0 +1,11 @@
+As far as I can tell the only thing that I added 
+that was outside of reference was what another 
+classmate suggested which was to add a question 
+mark after int and initializing the inverse member 
+so that it was optional to leave a void. This meant 
+that I needed to use that has value in order to 
+determine easily if it actually has a value. It 
+seemed like an easier way to determine which kind 
+of construction I would need to use.
+
+...pretty simple haha.
