@@ -1,0 +1,21 @@
+Activity
+duration
+void starting message(activity_name) {"Welcome to the __ activity."}
+void ending message(activity_name, activity duration) {end and spinner at the end}
+
+Breathing(30s)
+
+Refelect(about 2min)
+
+Listing (Your choice)
+
+
+
+using System.Threading;
+
+Thread.Sleep(2000); // Waits for 2000 milliseconds (2 seconds)
+
+using System.Threading;
+
+Thread.Sleep(2000); // Waits for 2000 milliseconds (2 seconds)
+
