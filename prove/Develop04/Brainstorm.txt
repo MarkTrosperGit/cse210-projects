@@ -1,4 +1,5 @@
 Activity
+private variables
 duration
 void starting message(activity_name) {"Welcome to the __ activity."}
 void ending message(activity_name, activity duration) {end and spinner at the end}
