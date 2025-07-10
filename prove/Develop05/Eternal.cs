@@ -1,16 +1,32 @@
-public class Eternal : Goals
+public class Eternal : Goal
 {
-    private int _pointsPer;
-    public override void getSave()
+    public override string GetSave()
     {
-
+        return $"Eternal:{GetName()}|{GetDescription()}|{GetPoints()}|{GetIsComplete()}";
     }
-    public override void recordEvent()
+    public override void DisplayForList()
     {
-        throw new NotImplementedException();
+        if (GetIsComplete())
+        {
+            string isChecked = "X";
+            Console.WriteLine($"[{isChecked}] {GetName()} ({GetDescription()})");
+        }
+        else
+        {
+            string isChecked = " ";
+            Console.WriteLine($"[{isChecked}] {GetName()} ({GetDescription()})");
+        }
     }
-    public Eternal(string name, string description, int score, bool isComplete, int pointsPer) : base(name, description, score, isComplete)
+    public override int RecordEvent()
     {
-        _pointsPer = pointsPer;
+        if (GetIsComplete() == false)
+        {
+            return GetPoints();
+        }
+        return 0;
+    }
+    public Eternal(string name, string description, int points, bool isComplete) : base(name, description, points, isComplete)
+    {
+        
     }
 }

@@ -1,0 +1,4 @@
+50
+Simple:HW|do it|20|True
+Eternal:Scriptures|Read them|30|False
+Check:Project|1. first, 2. second, 3. third|10|False|0|3|100

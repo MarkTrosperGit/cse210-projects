@@ -1,17 +1,33 @@
-public class Simple : Goals
+public class Simple : Goal
 {
-    private int _points;
-    public override void getSave()
+    public override string GetSave()
     {
-
+        return $"Simple:{GetName()}|{GetDescription()}|{GetPoints()}|{GetIsComplete()}";
     }
-    public override void recordEvent()
+    public override void DisplayForList()
     {
-        throw new NotImplementedException();
+        if (GetIsComplete())
+        {
+            string isChecked = "X";
+            Console.WriteLine($"[{isChecked}] {GetName()} ({GetDescription()})");
+        }
+        else
+        {
+            string isChecked = " ";
+            Console.WriteLine($"[{isChecked}] {GetName()} ({GetDescription()})");
+        }
     }
-    public Simple(string name, string description, int score, bool isComplete, int points) : base(name, description, score, isComplete)
+    public override int RecordEvent()
     {
-        _points = points;
+        if (GetIsComplete() == false)
+        {
+            SetIsComplete(true);
+            return GetPoints();
+        }
+        return 0;
+    }
+    public Simple(string name, string description, int points, bool isComplete) : base(name, description, points, isComplete)
+    {
     }
 
 
