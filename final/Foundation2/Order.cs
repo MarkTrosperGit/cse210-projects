@@ -24,4 +24,11 @@ public class Order
         //..
         return cost;
     }
+    public Order(Customer customer, List<Product> listOfProducts, string shippingLabel, string packingLabel)
+    {
+        _customer = customer;
+        _listOfProducts = listOfProducts;
+        _packingLabel = packingLabel;
+        _shippingLabel = shippingLabel;
+    }
 }

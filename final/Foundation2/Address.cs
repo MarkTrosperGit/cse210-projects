@@ -19,4 +19,11 @@ public class Address
     {
         return $"{_streetName}, {_city}, {_state}, {_country}";
     }
+    public Address(string streetName, string city, string state, string country)
+    {
+        _streetName = streetName;
+        _city = city;
+        _state = state;
+        _country = country;
+    }
 }

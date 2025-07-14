@@ -4,13 +4,16 @@ public class Video
     private string _author;
     private int _length;
     private List<Comment> _listOfComments;
-    public string DisplayVideo()
+    public void DisplayVideoInfo()
     {
-        return "Hi";
+        Console.WriteLine($"{_title} by {_author}, {_length} minutes:");
     }
-    public string ReturnComments()
+    public void DisplayComments()
     {
-        return "Hi";
+        foreach (Comment comment in _listOfComments)
+        {
+            Console.WriteLine($"{comment.GetPerson()}: {comment.GetText()}");
+        }
     }
     public Video(string title, string author, int length, List<Comment> listOfComments)
     {
