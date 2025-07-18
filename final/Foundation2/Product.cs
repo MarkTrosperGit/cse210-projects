@@ -6,6 +6,17 @@ public class Product
     private int _quantity;
     public double ReturnCost()
     {
-        return 0.0;
+        return _pricePerUnit * _quantity;
+    }
+    public string GetPackingStatement()
+    {
+        return $"{_productID}: {_name}";
+    }
+    public Product(string name, int productID, double pricePerUnit, int quantity)
+    {
+        _name = name;
+        _pricePerUnit = pricePerUnit;
+        _productID = productID;
+        _quantity = quantity;
     }
 }

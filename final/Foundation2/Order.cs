@@ -6,29 +6,44 @@ public class Order
     private string _packingLabel;
     public string CreateShippingLabel()
     {
-        return "";
+
+        return _customer.GetNameAndAddress();
     }
-    public string CreatePackkingLabel()
+    public string CreatePackingLabel()
     {
-        return "";
+        string packingLabel = "";
+        foreach (Product product in _listOfProducts)
+        {
+            packingLabel += $"{product.GetPackingStatement()}\n";
+        }
+        return packingLabel;
     }
     public double GetShippingCost()
     {
-        double cost = 0.0;
-        //..
-        return cost;
+        if (_customer.InUS() == true)
+        {
+            return 5.0;
+        }
+        else
+        {
+            return 35.0;
+        }
     }
     public double GetTotalCost()
     {
         double cost = 0.0;
-        //..
+        foreach (Product product in _listOfProducts)
+        {
+            cost += product.ReturnCost();
+        }
+        cost += GetShippingCost();
         return cost;
     }
-    public Order(Customer customer, List<Product> listOfProducts, string shippingLabel, string packingLabel)
+    public Order(Customer customer, List<Product> listOfProducts)
     {
         _customer = customer;
         _listOfProducts = listOfProducts;
-        _packingLabel = packingLabel;
-        _shippingLabel = shippingLabel;
+        _packingLabel = CreatePackingLabel();
+        _shippingLabel = CreateShippingLabel();
     }
 }

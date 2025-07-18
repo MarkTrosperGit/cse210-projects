@@ -1,25 +1,33 @@
-abstract class Activity
+public abstract class Activity
 {
-    private DateTime _date;
+    private string _date;
     private int _length;
-    protected Activity(DateTime date, int length)
+    public Activity(string date, int length)
     {
         _date = date;
         _length = length;
     }
-    protected virtual double GetDistance(int laps)
+    protected string GetDate()
     {
-        return laps * 50 / 0.62;
+        return _date;
     }
-    protected virtual double GetSpeed(double distance, int minutes)
+    protected int GetLength()
     {
-        return (double)(distance / minutes) * 60;
+        return _length;
     }
-    protected virtual double GetPace(double speed)
+    public virtual double GetDistance()
     {
-        return 60 / speed;
+        return 0.0;
     }
-    protected virtual string GetSummary(DateTime date, int length, double distance, double speed)
+    public virtual double GetSpeed()
+    {
+        return 0.0;
+    }
+    public virtual double GetPace()
+    {
+        return 0.0;
+    }
+    public virtual string GetSummary()
     {
         return "";
     }

@@ -4,25 +4,33 @@ public class Event
 {
     private string _title;
     private string _description;
-    private DateTime _date;
-    private DateTime _time;
+    private string _date;
+    private string _time;
     private Address _address;
-    protected string GetStandard()
+    protected string GetTitle()
     {
-        return "";
+        return _title;
     }
-    protected string GetFull()
+    protected string GetDescription()
     {
-        return "";
+        return _description;
     }
-    protected string GetDesc()
+    protected string GetDate()
     {
-        return "";
+        return _date;
     }
-    protected Event(string title, string desc, DateTime date, DateTime time, Address address)
+    protected string GetTime()
+    {
+        return _time;
+    }
+    protected Address GetAddress()
+    {
+        return _address;
+    }
+    protected Event(string title, string description, string date, string time, Address address)
     {
         _title = title;
-        _description = desc;
+        _description = description;
         _date = date;
         _time = time;
         _address = address;

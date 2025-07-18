@@ -26,7 +26,7 @@ class Program
         };
         List<Comment> list2 = new List<Comment>
         {
-            new Comment("Micahel", "Oof!"),
+            new Comment("Michael", "Oof!"),
             new Comment("Matt", "Naw man!"),
             new Comment("Troy", "Yolo!"),
             new Comment("Bruh", "Duh!")
@@ -49,7 +49,7 @@ class Program
         {
             new Video("Crazy Teacher Person", "Mark Trosper", 15, list1),
             new Video("Look At My House", "Seth Trosper", 20, list2),
-            new Video("Ah, He Did It!", "Micaehl Trosper", 25, list3),
+            new Video("Ah, He Did It!", "Michael Trosper", 25, list3),
             new Video("Veggies in Northern Brazil", "Aaron Trosper", 30, list4)
         };
         foreach (Video video in videoList)

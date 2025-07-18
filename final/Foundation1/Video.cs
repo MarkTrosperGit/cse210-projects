@@ -6,7 +6,7 @@ public class Video
     private List<Comment> _listOfComments;
     public void DisplayVideoInfo()
     {
-        Console.WriteLine($"{_title} by {_author}, {_length} minutes:");
+        Console.WriteLine($"{_title} by {_author}, {_length} minutes, {GetNumComments()} comments:");
     }
     public void DisplayComments()
     {
@@ -14,6 +14,10 @@ public class Video
         {
             Console.WriteLine($"{comment.GetPerson()}: {comment.GetText()}");
         }
+    }
+    private int GetNumComments()
+    {
+        return _listOfComments.Count();
     }
     public Video(string title, string author, int length, List<Comment> listOfComments)
     {

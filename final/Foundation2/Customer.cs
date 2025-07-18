@@ -8,6 +8,10 @@ public class Customer
     {
         return _address.InUS();
     }
+    public string GetNameAndAddress()
+    {
+        return $"{_name} - {_address.ReturnAddress()}";
+    }
     public Customer(string name, Address address)
     {
         _name = name;
